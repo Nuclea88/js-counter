@@ -1,13 +1,25 @@
 function add(){
-    //Escribir tu código que aumenta
+    let numberD = document.getElementById('number');
+    let number = parseInt(numberD.innerHTML);
+    number++;
+    numberD.innerHTML = number;
+   
 }
 
 function reset(){
-    //Escribir tu código que hace un reset a 0
+    let number = document.getElementById('number');
+     number.innerHTML = 0;
 }
 
 function decrease(){
-    //Escribir tu código que resta
+   let numberD = document.getElementById('number');
+   let number = parseInt(numberD.innerHTML);
+    if(number == 0){
+        console.log('no se permiten numeros negativos');
+    }else{
+        number--;
+    }
+    numberD.innerHTML = number;
 };
 
 export {add, reset, decrease}
